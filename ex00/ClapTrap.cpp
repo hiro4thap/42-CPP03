@@ -6,7 +6,7 @@
 /*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 17:28:26 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 13:35:27 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/23 16:35:22 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int		ClapTrap::getHitPoint() const
 void	ClapTrap::setHitPoint(int hp)
 {
 	_hit_point = hp;
-	std::cout << _name << "'s hit points is set to " << _attack_damage << " by using setter" << "\n";
+	std::cout << _name << "'s hit points is set to " << _hit_point << " by using setter" << "\n";
 }
 
 int		ClapTrap::getEnergyPoint() const
@@ -112,7 +112,7 @@ int		ClapTrap::getEnergyPoint() const
 void	ClapTrap::setEnergyPoint(int ep)
 {
 	_energy_point = ep;
-	std::cout << _name << "'s energy points is set to " << _attack_damage << " by using setter" << "\n";
+	std::cout << _name << "'s energy points is set to " << _energy_point << " by using setter" << "\n";
 }
 
 int		ClapTrap::getAttackDamage() const
@@ -123,5 +123,5 @@ int		ClapTrap::getAttackDamage() const
 void	ClapTrap::setAttackDamage(int ad)
 {
 	_attack_damage = ad;
-	std::cout << _name << "'s attack damage is set to " << ad << " by using setter" << "\n";
+	std::cout << _name << "'s attack damage is set to " << _attack_damage << " by using setter" << "\n";
 }
