@@ -6,7 +6,7 @@
 /*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 17:28:22 by dev               #+#    #+#             */
-/*   Updated: 2024/06/22 18:29:20 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/23 16:46:09 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class	ClapTrap
 {
 public:
+	ClapTrap(void);
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &rhs);
 	ClapTrap &operator=(const ClapTrap &rhs);

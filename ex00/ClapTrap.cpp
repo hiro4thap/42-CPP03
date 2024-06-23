@@ -6,11 +6,19 @@
 /*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 17:28:26 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:35:22 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/23 16:46:59 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(void)
+{
+	_name = "blank";
+	_hit_point = 10;
+	_energy_point = 10;
+	_attack_damage = 0;
+}
 
 ClapTrap::ClapTrap(std::string name)
 {

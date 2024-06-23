@@ -6,11 +6,18 @@
 /*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 14:58:49 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:31:27 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/23 16:48:27 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap(void): ClapTrap()
+{
+	_hit_point = 100;
+	_energy_point = 50;
+	_attack_damage = 20;
+}
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
