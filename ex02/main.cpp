@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:23:12 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:58:56 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/24 17:32:10 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 int	main(void)
 {
+	std::cout << "--- Construct ---" << "\n";
 	FragTrap	Aden("Aden");
 	std::cout << "--- HP and EP are more than 0 ---" << "\n";
 	Aden.highFiveGuys();

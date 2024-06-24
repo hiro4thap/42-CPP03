@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 14:58:49 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:48:27 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/24 17:28:18 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ ScavTrap::ScavTrap(void): ClapTrap()
 	_hit_point = 100;
 	_energy_point = 50;
 	_attack_damage = 20;
+	std::cout << "ScavTrap " << _name << " is constructed" << "\n";
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
@@ -24,7 +25,7 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	_hit_point = 100;
 	_energy_point = 50;
 	_attack_damage = 20;
-	std::cout << "ClapTrap " << _name << " has changed to ScavTrap" << "\n";
+	std::cout << "ScavTrap " << _name << " is constructed" << "\n";
 }
 
 ScavTrap::ScavTrap(const ScavTrap &rhs): ClapTrap(rhs)
@@ -41,7 +42,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap " << _name << " has changed to ClapTrap" << "\n";
+	std::cout << "ScavTrap " << _name << " is destructed" << "\n";
 }
 
 void	ScavTrap::attack(const std::string& target)
@@ -57,7 +58,7 @@ void	ScavTrap::attack(const std::string& target)
 	}
 }
 
-void	ScavTrap::guardGate()
+void	ScavTrap::guardGate() const
 {
 	std::cout << "ScavTrap " << _name << " is now gate keeper mode" << "\n";
 }

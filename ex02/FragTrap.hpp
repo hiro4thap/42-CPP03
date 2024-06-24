@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 14:58:53 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:59:44 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/24 17:32:42 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	FragTrap &operator=(const FragTrap &rhs);
 	~FragTrap();
 	void	attack(const std::string& target);
-	void	highFiveGuys(void);
+	void	highFiveGuys(void) const;
 };
 
 #endif

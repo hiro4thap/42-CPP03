@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 17:28:26 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:44:51 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/24 17:30:03 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ ClapTrap::ClapTrap()
 	_hit_point = 10;
 	_energy_point = 10;
 	_attack_damage = 0;
+	std::cout << "ClapTrap " << _name << " is constructed" << "\n";
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -26,7 +27,7 @@ ClapTrap::ClapTrap(std::string name)
 	_hit_point = 10;
 	_energy_point = 10;
 	_attack_damage = 0;
-	std::cout << "ClapTrap " << _name << " has appeared" << "\n";
+	std::cout << "ClapTrap " << _name << " is constructed" << "\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &rhs)
@@ -43,7 +44,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap " << _name << " has disappeared" << "\n";
+	std::cout << "ClapTrap " << _name << " is destructed" << "\n";
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -89,7 +90,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 }
 
-std::string		ClapTrap::getName()
+std::string		ClapTrap::getName() const
 {
 	return _name;
 }

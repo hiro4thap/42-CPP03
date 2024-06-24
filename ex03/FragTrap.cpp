@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 14:58:49 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:59:52 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/24 17:34:46 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ FragTrap::FragTrap(void): ClapTrap()
 	_hit_point = 100;
 	_energy_point = 100;
 	_attack_damage = 30;
+	std::cout << "FragTrap " << _name << " is constructed" << "\n";
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name)
@@ -24,7 +25,7 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
 	_hit_point = 100;
 	_energy_point = 100;
 	_attack_damage = 30;
-	std::cout << "ClapTrap " << _name << " has changed to FragTrap" << "\n";
+	std::cout << "FragTrap " << _name << " is constructed" << "\n";
 }
 
 FragTrap::FragTrap(const FragTrap &rhs): ClapTrap(rhs)
@@ -41,7 +42,7 @@ FragTrap &FragTrap::operator=(const FragTrap &rhs)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap " << _name << " has changed to ClapTrap" << "\n";
+	std::cout << "FragTrap " << _name << " is destructed" << "\n";
 }
 
 void	FragTrap::attack(const std::string& target)
@@ -57,7 +58,7 @@ void	FragTrap::attack(const std::string& target)
 	}
 }
 
-void	FragTrap::highFiveGuys(void)
+void	FragTrap::highFiveGuys(void) const
 {
 	std::cout << "FragTrap " << _name << " has requested high five" << "\n";
 }

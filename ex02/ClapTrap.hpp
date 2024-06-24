@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 17:28:22 by dev               #+#    #+#             */
-/*   Updated: 2024/06/23 16:47:21 by dev              ###   ########.fr       */
+/*   Updated: 2024/06/24 17:29:53 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-	std::string		getName();
+	std::string		getName() const;
 	void			setName(std::string name);
 	int		getHitPoint() const;
 	void	setHitPoint(int hp);
