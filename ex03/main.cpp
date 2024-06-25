@@ -6,7 +6,7 @@
 /*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:23:12 by dev               #+#    #+#             */
-/*   Updated: 2024/06/24 15:33:44 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/25 15:52:55 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,24 @@
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
+void	print_clap(DiamondTrap& trap)
+{
+	std::cout << "name in dia   : " << trap.getName() << "\n";
+	std::cout << "name in clap  : " << trap.ClapTrap::getName() << "\n";
+	std::cout << "hit point     : " << trap.getHitPoint() << "\n";
+	std::cout << "energy point  : " << trap.getEnergyPoint() << "\n";
+	std::cout << "attack damage : " << trap.getAttackDamage() << "\n";
+}
+
 int	main(void)
 {
+	std::cout << "--- Construct ---" << "\n";
 	DiamondTrap	Aden("Aden");
-	std::cout << "--- HP and EP are more than 0 ---" << "\n";
+	print_clap(Aden);
+	Aden.whoAmI();
+	Aden.guardGate();
 	Aden.highFiveGuys();
+	std::cout << "--- HP and EP are more than 0 ---" << "\n";
 	Aden.attack("Ben");
 	Aden.setAttackDamage(10);
 	Aden.setEnergyPoint(3);
@@ -33,10 +46,6 @@ int	main(void)
 
 	std::cout << "--- HP is 0 ---" << "\n";
 	Aden.attack("Ben");
-	std::cout << "--- Destruct ---" << "\n";
-	Aden.whoAmI();
 
-	Aden.ClapTrap::attack("something1");
-	Aden.ScavTrap::attack("something2");
-	Aden.FragTrap::attack("something3");
+	std::cout << "--- Destruct ---" << "\n";
 }

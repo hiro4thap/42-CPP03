@@ -6,7 +6,7 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:23:12 by dev               #+#    #+#             */
-/*   Updated: 2024/06/24 17:32:10 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/25 15:51:49 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
+void	print_clap(FragTrap& trap)
+{
+	std::cout << "name in dia   : " << trap.getName() << "\n";
+	std::cout << "hit point     : " << trap.getHitPoint() << "\n";
+	std::cout << "energy point  : " << trap.getEnergyPoint() << "\n";
+	std::cout << "attack damage : " << trap.getAttackDamage() << "\n";
+}
+
 int	main(void)
 {
 	std::cout << "--- Construct ---" << "\n";
 	FragTrap	Aden("Aden");
+	print_clap(Aden);
 	std::cout << "--- HP and EP are more than 0 ---" << "\n";
 	Aden.highFiveGuys();
 	Aden.attack("Ben");

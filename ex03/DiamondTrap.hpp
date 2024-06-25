@@ -6,7 +6,7 @@
 /*   By: dev <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 18:54:27 by dev               #+#    #+#             */
-/*   Updated: 2024/06/24 15:23:25 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/25 15:41:39 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ public:
 	~DiamondTrap();
 	void	attack(const std::string& target);
 	void	whoAmI() const;
+	std::string		getName() const;
+	void			setName(std::string name);
 
 private:
 	std::string		_name;

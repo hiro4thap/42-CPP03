@@ -6,17 +6,26 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 18:23:12 by dev               #+#    #+#             */
-/*   Updated: 2024/06/24 17:29:01 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/25 15:49:20 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
+void	print_clap(ScavTrap& trap)
+{
+	std::cout << "name in dia   : " << trap.getName() << "\n";
+	std::cout << "hit point     : " << trap.getHitPoint() << "\n";
+	std::cout << "energy point  : " << trap.getEnergyPoint() << "\n";
+	std::cout << "attack damage : " << trap.getAttackDamage() << "\n";
+}
+
 int	main(void)
 {
 	std::cout << "--- Construct ---" << "\n";
 	ScavTrap	Aden("Aden");
+	print_clap(Aden);
 	std::cout << "--- HP and EP are more than 0 ---" << "\n";
 	Aden.guardGate();
 	Aden.attack("Ben");

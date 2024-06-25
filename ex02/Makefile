@@ -1,7 +1,7 @@
 NAME		= FragTrap
 
 COMPILE		= c++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98 -MMD
+CFLAGS		= -Wall -Wextra -Werror -Wshadow -std=c++98 -MMD
 
 SRC_DIR 	= ./
 OBJ_DIR 	= obj/
